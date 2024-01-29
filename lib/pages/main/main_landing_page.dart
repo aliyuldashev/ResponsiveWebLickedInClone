@@ -1,9 +1,10 @@
-
 import 'package:flutter/material.dart';
 import 'package:linkedin_web_ui/pages/nav_pages/home/home_page.dart';
 import 'package:linkedin_web_ui/theme/styles.dart';
 import 'package:linkedin_web_ui/widgets/navbar_widget.dart';
 import 'package:sticky_headers/sticky_headers.dart';
+
+import '../nav_pages/Network/network_page_desktop.dart';
 
 class MainLandingPage extends StatefulWidget {
   const MainLandingPage({super.key});
@@ -13,7 +14,6 @@ class MainLandingPage extends StatefulWidget {
 }
 
 class _MainLandingPageState extends State<MainLandingPage> {
-
   int _currentSelectedNavIndex = 0;
 
   ScrollController? _scrollController;
@@ -32,7 +32,8 @@ class _MainLandingPageState extends State<MainLandingPage> {
                   _currentSelectedNavIndex = index;
                 });
               }),
-              content: _switchPagesAccordingToNavbarIndex(_currentSelectedNavIndex),
+              content:
+                  _switchPagesAccordingToNavbarIndex(_currentSelectedNavIndex),
             ),
           ],
         ),
@@ -49,7 +50,7 @@ class _MainLandingPageState extends State<MainLandingPage> {
       case 1:
         {
           return const Center(
-            child: Text("My Network"),
+            child: NetworkPageDesktopUI(),
           );
         }
       case 2:

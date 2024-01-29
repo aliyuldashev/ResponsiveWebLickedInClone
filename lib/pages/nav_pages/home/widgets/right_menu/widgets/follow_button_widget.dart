@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:linkedin_web_ui/theme/styles.dart';
 
@@ -10,7 +9,6 @@ class FollowButtonWidget extends StatefulWidget {
 }
 
 class _FollowButtonWidgetState extends State<FollowButtonWidget> {
-
   bool _isHover = false;
   @override
   Widget build(BuildContext context) {
@@ -25,16 +23,33 @@ class _FollowButtonWidgetState extends State<FollowButtonWidget> {
         width: 105,
         height: 35,
         decoration: BoxDecoration(
-          color: _isHover == true? linkedInLightGreyBackgroundF3F2EE : linkedInWhiteFFFFFF,
+          color: _isHover == true
+              ? linkedInLightGreyBackgroundF3F2EE
+              : linkedInWhiteFFFFFF,
           borderRadius: BorderRadius.circular(20),
-          border: Border.all(width: _isHover == true? 2 : 1, color: _isHover == true?linkedInMediumGrey86888A: linkedInMediumGrey86888A),
+          border: Border.all(
+              width: _isHover == true ? 2 : 1,
+              color: _isHover == true
+                  ? linkedInMediumGrey86888A
+                  : linkedInMediumGrey86888A),
         ),
         child: const Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.add, color: linkedInMediumGrey86888A,),
-            SizedBox(width: 5,),
-            Text("Follow", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: linkedInMediumGrey86888A),)
+            Icon(
+              Icons.add,
+              color: linkedInMediumGrey86888A,
+            ),
+            SizedBox(
+              width: 5,
+            ),
+            Text(
+              "Follow",
+              style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w600,
+                  color: linkedInMediumGrey86888A),
+            )
           ],
         ),
       ),
